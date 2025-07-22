@@ -2,10 +2,9 @@
 Rectangle = __import__('5-rectangle').Rectangle
 
 my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(
-    my_rectangle.area(), 
-    my_rectangle.perimeter()
-))
+area = my_rectangle.area()
+perimeter = my_rectangle.perimeter()
+print("Area: {} - Perimeter: {}".format(area, perimeter))
 
 del my_rectangle
 
