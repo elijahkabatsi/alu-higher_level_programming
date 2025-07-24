@@ -1,29 +1,32 @@
-# Python - Everything is Object
+# Python - Inheritance
 
-This project explores the core concept in Python that **everything is an object**. You'll answer conceptual and practical questions that reinforce how data types, identity, mutability, and references work in Python.
+This project explores the concept of **inheritance** in Python — one of the fundamental principles of object-oriented programming (OOP). Inheritance allows a class (child class) to inherit attributes and methods from another class (parent class), promoting code reuse and logical hierarchy.
 
 ## Learning Objectives
 
-By the end of this project, you should be able to:
+By the end of this project, you will be able to:
 
-- Understand and explain the difference between:
-  - `id()`, `type()`, and `is`
-  - Mutable vs immutable objects
-  - Value vs reference in variable assignment
-- Know how Python handles objects internally
-- Identify when two variables reference the same object or different objects
-- Understand how Python handles memory for different object types
+- Understand the basics of inheritance in Python
+- Use the `dir()` function to retrieve attributes and methods of an object
+- Distinguish between base classes and subclasses
+- Override parent methods in child classes
+- Use the `super()` function to call parent class methods
+- Understand how to inspect class relationships with `issubclass()` and `isinstance()`
 
-## Project Structure
+## File Descriptions
 
-Each question in this project requires you to write a one-word or one-line answer in a `.txt` file. No Python scripts—just direct answers.
+| File            | Description |
+|-----------------|-------------|
+| `0-lookup.py`   | Contains a function `lookup(obj)` that returns a list of all attributes and methods of an object. |
+| `0-main.py`     | Test file to verify the behavior of `lookup()` with different classes. |
 
-Example:
-- `0-answer.txt`: Contains the name of the function used to determine the type of an object.
+## Example Usage
 
-## Requirements
+```python
+class MyClass:
+    my_attr = 42
+    def my_method(self):
+        return "Hello"
 
-- All `.txt` files must contain exactly one line
-- No blank lines or unnecessary spaces
-- Answers must be precise (no explanations unless asked)
-
+print(lookup(MyClass))
+# Output: ['__class__', ..., 'my_attr', 'my_method']
